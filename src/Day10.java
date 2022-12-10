@@ -45,9 +45,9 @@ public class Day10 {
         long regX=1,ins=1;
         while(sc.hasNextLine()){
             if((ins-1)%40>=regX-1 && (ins-1)%40<=regX+1){
-                pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='#';
+                pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='▓';
             }
-            else pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='.';
+            else pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]=' ';
             String[] inst = sc.nextLine().split(" ");
             switch (inst[0]){
                 case "noop"->ins++;
@@ -56,9 +56,9 @@ public class Day10 {
                     long val =Long.parseLong(inst[1]);
                     ins++;
                     if((ins-1)%40>=regX-1 && (ins-1)%40<=regX+1){
-                        pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='#';
+                        pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='▓';
                     }
-                    else pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]='.';
+                    else pixel[(int) ((ins-1)/40)][(int) ((ins-1)%40)]=' ';
                     regX+=val;
                     ins++;
                 }
