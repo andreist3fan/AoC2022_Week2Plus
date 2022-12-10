@@ -4,7 +4,7 @@ import java.util.*;
 public class Day10 {
 
     /**
-     *  10th day, first part
+     *  10th day, first part;
      *  very easy and fun
      * @return answer
      * @throws FileNotFoundException if no file :(
