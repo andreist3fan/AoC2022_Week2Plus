@@ -1,10 +1,11 @@
 public class Position {
-    private int x;
-    private int y;
+    private final int x;
+    private final int y;
 
     /**
      * TEMPORARY CLASS FOR DAY 9
      * <p>Constructor of an object </p>
+     *
      * @param x the x of the object
      * @param y the y of the object
      */

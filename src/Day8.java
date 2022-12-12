@@ -1,9 +1,11 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class Day8 {
     /**
-     *  O(n^3) (kind of)
+     * O(n^3) (kind of)
+     *
      * @return .
      * @throws FileNotFoundException .
      */
@@ -45,13 +47,14 @@ public class Day8 {
 
     /**
      * can_you get out of the "forest" in that direction?
+     *
      * @param mat the matrix
-     * @param n height
-     * @param m length
-     * @param dx direction on x-axis
-     * @param dy direction on y-axis
-     * @param i current row index
-     * @param j current column index
+     * @param n   height
+     * @param m   length
+     * @param dx  direction on x-axis
+     * @param dy  direction on y-axis
+     * @param i   current row index
+     * @param j   current column index
      * @return true/false
      */
     public static boolean can_you(int[][] mat, int n, int m, int dx, int dy, int i, int j) {
@@ -66,6 +69,7 @@ public class Day8 {
 
     /**
      * Still O(n^3), but reused most code
+     *
      * @return .
      * @throws FileNotFoundException .
      */
@@ -98,15 +102,17 @@ public class Day8 {
         }
         return res;
     }
+
     /**
      * Gets a position's scenic number in a direction (U/D/L/R)
+     *
      * @param mat the matrix
-     * @param n height
-     * @param m length
-     * @param dx direction on x-axis
-     * @param dy direction on y-axis
-     * @param i current row index
-     * @param j current column index
+     * @param n   height
+     * @param m   length
+     * @param dx  direction on x-axis
+     * @param dy  direction on y-axis
+     * @param i   current row index
+     * @param j   current column index
      * @return the scenic number in that direction
      */
     public static int scenic(int[][] mat, int n, int m, int dx, int dy, int i, int j) {

@@ -1,5 +1,7 @@
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Day9 {
 
@@ -36,13 +38,12 @@ public class Day9 {
             }
         }
         char[][] mm = new char[30][250];
-        for(int i=0;i<tailPos.size();i++)
-        {
-             mm[tailPos.get(i).getX()][tailPos.get(i).getY()]='█';
+        for (int i = 0; i < tailPos.size(); i++) {
+            mm[tailPos.get(i).getX()][tailPos.get(i).getY()] = '█';
         }
-        for(int i=0;i<mm.length;i++){
-            for(int j=0;j<mm[i].length;j++)
-                if(mm[i][j]!='█')
+        for (int i = 0; i < mm.length; i++) {
+            for (int j = 0; j < mm[i].length; j++)
+                if (mm[i][j] != '█')
                     System.out.print(' ');
                 else
                     System.out.print(mm[i][j]);
