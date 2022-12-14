@@ -39,7 +39,7 @@ public class Day13 {
      *
      * @param a1 packet 1
      * @param a2 packet 2
-     * @return -1 if a1<a2 , 1 if a1>a2, 0 otherwise
+     * @return 1 if a1<a2 , -1 if a1>a2, 0 otherwise
      */
     public static int compare(ArrayList<Object> a1, ArrayList<Object> a2) {
         int i;
