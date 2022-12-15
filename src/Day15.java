@@ -45,10 +45,8 @@ public class Day15 {
             // System.out.println(x + " " + y + " " + dist);
             if (x < xQuestion && x + dist >= xQuestion) {
                 dist -= (xQuestion - x);
-                x = xQuestion;
             } else if (x > xQuestion && x - dist <= xQuestion) {
                 dist -= (x - xQuestion);
-                x = xQuestion;
             } else continue;
             //System.out.println("continued");
 
@@ -81,8 +79,8 @@ public class Day15 {
         return seqs.get(0).getY() - seqs.get(0).getX();//there is a beacon there
     }
 
-    public static boolean isIn(int x, Position p) {
-        return x >= p.getX() && x <= p.getY();
+    public static boolean isIn(int coord, Position p) {
+        return coord >= p.getX() && coord <= p.getY();
     }
 
     /**
@@ -97,8 +95,7 @@ public class Day15 {
         ArrayList<Position> sensors = new ArrayList<>();
         ArrayList<Position> beacons = new ArrayList<>();
         ArrayList<Integer> distances = new ArrayList<>();
-        List<Integer> confirmedPos = new ArrayList<>();
-        List<Position> seqs = new ArrayList<>();
+        List<Position> seqs;
         while (sc.hasNextLine()) {
             String[] coords = sc.nextLine().split("Sensor at x=|, y=|: closest beacon is at x=");
             int xs = Integer.parseInt(coords[1]), ys = Integer.parseInt(coords[2]);
@@ -123,10 +120,8 @@ public class Day15 {
                 // System.out.println(x + " " + y + " " + dist);
                 if (x < xq && x + dist >= xq) {
                     dist -= (xq - x);
-                    x = xq;
                 } else if (x > xq && x - dist <= xq) {
                     dist -= (x - xq);
-                    x = xq;
                 } else if (x != xq) continue;
                 //System.out.println("continued");
 
